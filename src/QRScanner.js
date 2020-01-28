@@ -7,6 +7,20 @@ class QRScanner extends Component {
   };
 
   handleScan = data => {
+    if (
+      String(data)
+        .toLowerCase()
+        .startsWith('http')
+    ) {
+      // window.location.assign(data);
+      var a = document.createElement('a');
+      document.body.appendChild(a);
+      a.style = 'display: none';
+      a.href = data;
+      // a.target = '_blank';
+      // a.download = resumeTitle + ".pdf";
+      a.click();
+    }
     if (data) {
       this.setState({
         result: data
@@ -19,12 +33,30 @@ class QRScanner extends Component {
   render() {
     return (
       <div>
-        <QrReader
-          delay={300}
-          onError={this.handleError}
-          onScan={this.handleScan}
-          style={{ width: '100%' }}
-        />
+        <div
+          style={{
+            background: 'rgb(235, 98, 125)',
+            padding: '16px',
+            margin: '16px',
+            color: '#fff'
+          }}>
+          TOM
+        </div>
+        <br />
+        <br />
+        <div style={{ color: '#eb627d' }}>
+          Placez le QR code au centre du carré !
+        </div>
+        <br />
+        <br />
+        <div>
+          <QrReader
+            delay={300}
+            onError={this.handleError}
+            onScan={this.handleScan}
+            style={{ width: '100%' }}
+          />
+        </div>
         <p>{this.state.result}</p>
       </div>
     );
