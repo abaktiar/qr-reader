@@ -26,7 +26,7 @@ class QRScanner extends Component {
   };
   render() {
     return (
-      <div style={{ margin: '16px' }}>
+      <div>
         <div
           style={{
             background: '#e9607d',
@@ -42,23 +42,25 @@ class QRScanner extends Component {
             alt='logo'
           />
         </div>
-        <br />
-        <br />
-        <div style={{ color: '#e9607d' }}>
-          Placez le QR code au centre du carré !
+        <div style={{ margin: '16px' }}>
+          <br />
+          <br />
+          <div style={{ color: '#e9607d' }}>
+            Placez le QR code au centre du carré !
+          </div>
+          <br />
+          <br />
+          <br />
+          <div>
+            <QrReader
+              delay={300}
+              onError={this.handleError}
+              onScan={this.handleScan}
+              style={{ width: '100%' }}
+            />
+          </div>
+          <p>{this.state.result}</p>
         </div>
-        <br />
-        <br />
-        <br />
-        <div>
-          <QrReader
-            delay={300}
-            onError={this.handleError}
-            onScan={this.handleScan}
-            style={{ width: '100%' }}
-          />
-        </div>
-        <p>{this.state.result}</p>
       </div>
     );
   }

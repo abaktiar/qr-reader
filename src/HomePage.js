@@ -13,7 +13,7 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div style={{ margin: '16px' }}>
+      <div>
         <div
           style={{
             background: '#e9607d',
@@ -29,42 +29,44 @@ class HomePage extends React.Component {
             alt='logo'
           />
         </div>
-        <br />
-        {/* <br /> */}
-        <div style={{ margin: '0 8px', fontSize: '18px' }}>
-          <div style={{ color: '#e9607d' }}>Bienvenue sur HeyTom !</div>
-          <div style={{ color: '#e9607d' }}>
-            Pour commander, scannez un qr code en cliquant sur le bouton
-            ci-dessous
+        <div style={{ margin: '16px' }}>
+          <br />
+          {/* <br /> */}
+          <div style={{ margin: '0 8px', fontSize: '18px' }}>
+            <div style={{ color: '#e9607d' }}>Bienvenue sur HeyTom !</div>
+            <div style={{ color: '#e9607d' }}>
+              Pour commander, scannez un qr code en cliquant sur le bouton
+              ci-dessous
+            </div>
           </div>
-        </div>
-        <br />
-        <br />
-        <div
-          style={{
-            width: '220px',
-            height: '220px',
-            overflow: 'hidden',
-            margin: '0px auto',
-            outline: 'none'
-          }}>
-          <img
+          <br />
+          <br />
+          <div
             style={{
-              transform: 'translate3d(0px, 0px, 0px)',
-              width: '100%',
-              height: '100%',
-              marginLeft: '16px'
-            }}
-            alt='scan'
-            src={require('./scan.gif')}
-          />
-        </div>
-        <br />
-        <br />
-        <div>
-          <button className='scanner' onClick={this.handleClick}>
-            SCANNER
-          </button>
+              width: '220px',
+              height: '220px',
+              overflow: 'hidden',
+              margin: '0px auto',
+              outline: 'none'
+            }}>
+            <img
+              style={{
+                transform: 'translate3d(0px, 0px, 0px)',
+                width: '100%',
+                height: '100%',
+                marginLeft: '16px'
+              }}
+              alt='scan'
+              src={require('./scan.gif')}
+            />
+          </div>
+          <br />
+          <br />
+          <div>
+            <button className='scanner' onClick={this.handleClick}>
+              SCANNER
+            </button>
+          </div>
         </div>
       </div>
     );
