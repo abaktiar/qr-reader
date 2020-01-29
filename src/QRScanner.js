@@ -3,7 +3,7 @@ import QrReader from 'react-qr-reader';
 
 class QRScanner extends Component {
   state = {
-    result: 'No result'
+    result: ''
   };
 
   handleScan = data => {
@@ -32,21 +32,28 @@ class QRScanner extends Component {
   };
   render() {
     return (
-      <div>
+      <div style={{ margin: '16px' }}>
         <div
           style={{
-            background: 'rgb(235, 98, 125)',
-            padding: '16px',
-            margin: '16px',
-            color: '#fff'
+            background: '#e9607d',
+            padding: '4px',
+            color: '#fff',
+            display: 'flex',
+            justifyContent: 'center'
           }}>
-          TOM
+          <img
+            width='64px'
+            height='64px'
+            src={require('./logo.png')}
+            alt='logo'
+          />
         </div>
         <br />
         <br />
-        <div style={{ color: '#eb627d' }}>
+        <div style={{ color: '#e9607d' }}>
           Placez le QR code au centre du carré !
         </div>
+        <br />
         <br />
         <br />
         <div>
