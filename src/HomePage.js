@@ -38,8 +38,17 @@ class HomePage extends React.Component {
               Pour commander, scannez un qr code en cliquant sur le bouton
               ci-dessous
             </div>
+            <div
+              style={{
+                fontSize: '14px',
+                color: 'grey',
+                fontStyle: 'italic',
+                marginTop: '8px'
+              }}>
+              (Please Press the button below to scan the QR code)
+            </div>
           </div>
-          <br />
+          {/* <br /> */}
           <br />
           <div
             style={{

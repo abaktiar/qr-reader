@@ -48,6 +48,15 @@ class QRScanner extends Component {
           <div style={{ color: '#e9607d' }}>
             Placez le QR code au centre du carré !
           </div>
+          <div
+            style={{
+              fontSize: '14px',
+              color: 'grey',
+              fontStyle: 'italic',
+              marginTop: '8px'
+            }}>
+            (Place the QR in the red square !)
+          </div>
           <br />
           <br />
           <br />
