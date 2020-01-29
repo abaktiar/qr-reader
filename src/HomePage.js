@@ -40,10 +40,10 @@ class HomePage extends React.Component {
             </div>
             <div
               style={{
-                fontSize: '14px',
+                fontSize: '13px',
                 color: 'grey',
                 fontStyle: 'italic',
-                marginTop: '8px'
+                marginTop: '12px'
               }}>
               (Please Press the button below to scan the QR code)
             </div>

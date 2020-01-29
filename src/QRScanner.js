@@ -50,10 +50,10 @@ class QRScanner extends Component {
           </div>
           <div
             style={{
-              fontSize: '14px',
+              fontSize: '13px',
               color: 'grey',
               fontStyle: 'italic',
-              marginTop: '8px'
+              marginTop: '12px'
             }}>
             (Place the QR in the red square !)
           </div>
