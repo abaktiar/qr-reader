@@ -7,18 +7,12 @@ class QRScanner extends Component {
   };
 
   handleScan = data => {
-    if (
-      String(data)
-        .toLowerCase()
-        .startsWith('http')
-    ) {
-      // window.location.assign(data);
+    let url = String(data).toLowerCase();
+    if (url.startsWith('http') || url.startsWith('www')) {
       var a = document.createElement('a');
       document.body.appendChild(a);
       a.style = 'display: none';
       a.href = data;
-      // a.target = '_blank';
-      // a.download = resumeTitle + ".pdf";
       a.click();
     }
     if (data) {
