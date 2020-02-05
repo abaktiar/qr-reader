@@ -66,7 +66,7 @@ class QRScanner extends Component {
               onError={this.handleError}
               onScan={this.handleScan}
               style={{ width: '100%' }}
-              resolution={750}
+              resolution={800}
             />
           </div>
           <p>{this.state.result}</p>
